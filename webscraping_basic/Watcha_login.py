@@ -6,13 +6,13 @@ import time
 browser = webdriver.Chrome()
 browser.get("https://watcha.com/")
 
-elem = browser.find_element(By.XPATH,"//*[@id='root']/div[1]/nav/ul[2]/li/a")
+elem = browser.find_element(By.CLASS_NAME,"css-qxkazn")
 elem.click()
 
-browser.find_element(By.XPATH,"//*[@id='root']/div[1]/main/div/main/div/form/div[1]/input").send_keys("개인id")
-browser.find_element(By.XPATH,"//*[@id='root']/div[1]/main/div/main/div/form/div[2]/input").send_keys("개인pw")
+browser.find_element(By.CLASS_NAME,"css-2sw17l").send_keys("wlsdud2528@gmail.com")
+browser.find_element(By.CLASS_NAME,"css-s8pas4").send_keys("ehxhfl1720!")
 
-browser.find_element(By.XPATH,"//*[@id='root']/div[1]/main/div/main/div/form/div[3]/button").click()
+browser.find_element(By.CLASS_NAME,"css-11a3zmg").click()
 
 time.sleep(2)
 
