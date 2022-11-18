@@ -1,9 +1,11 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from .Serializers import PostSerializer
-from .models import Post
+from rest_framework.response import Response
+from .Serializers import AccountsSerializer
+from .models import Accounts
 
-# Create your views here.
-class PostViewset(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
+class AccountsViewset(viewsets.ModelViewSet):
+    queryset = Accounts.objects.all()
+    serializer_class = AccountsSerializer
+
+
+

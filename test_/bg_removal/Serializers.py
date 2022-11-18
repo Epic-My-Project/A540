@@ -1,7 +1,8 @@
-from rest_framework import  serializers
-from .models import Post
+from rest_framework import serializers
+from .models import Accounts
 
-class PostSerializer(serializers.ModelSerializer):
+class AccountsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Post
-        fields = ('title', 'text')
+        model = Accounts
+        fields = ('identify', 'password')
+
