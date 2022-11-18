@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-x!av(jvz)#$2^i108uw&bnrz@=9hm!@x4_(bues%)#cgh(fsup
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '794e-14-34-63-131.jp.ngrok.io', '172.30.1.83:8000' 
+    'c483-14-34-63-131.jp.ngrok.io', '172.30.1.83:8000'
+    # '794e-14-34-63-131.jp.ngrok.io', '172.30.1.83:8000' 
 ]
 
 
