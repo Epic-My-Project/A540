@@ -1,5 +1,42 @@
 import csv
+import pandas as pd
 
+Netflix_title = pd.read_csv('Netflix_title.csv', encoding='utf-8')
+Netflix_history = pd.read_csv('NetflixViewingHistory.csv', encoding='utf-8')
+
+# 두 csv에서 title만 가져오기
+title = Netflix_title.iloc[:,[0]]
+hist = Netflix_history.iloc[:,[0]]
+
+# dataframe -> list
+title = title.values.tolist()
+hist = hist.values.tolist()
+# print(title)
+viewcount = []
+for temp_t in title:
+    counter = 0
+    for temp_h in hist:
+        if temp_t == temp_h:
+            print(temp_t)
+            counter += 1 
+        else:
+            counter += 0
+    viewcount.append(counter)
+
+# list -> dataframe
+title = pd.DataFrame(title)
+viewcount = pd.DataFrame(viewcount)
+
+# title 파일에 history 칼럼을 추가, 열에 viewcount를 추가
+title['history'] = viewcount
+# csv파일 생성
+title.to_csv(f'Netflix_t_h.csv', mode='w', encoding='utf-8-sig', header=True, index=False)
+
+
+
+
+
+"""
 Netflix_title = open('Netflix_title.csv','r', encoding='utf-8-sig')
 Netflix_title_r = csv.reader(Netflix_title)
 t_header = next(Netflix_title_r)
@@ -42,3 +79,4 @@ for t_h in history_t:
     data = [t_h[0],t_h[1],t_h[2]]
     writer.writerow(data)
 Netflix_t_h.close()
+"""

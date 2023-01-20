@@ -25,7 +25,7 @@ time.sleep(3)
 
 # 다수의 프로필 중 선택
 profile = browser.find_elements(By.CLASS_NAME,"profile-link")
-profile[3].click()      
+profile[2].click()      
 time.sleep(3)
 
 # 영화 탭 클릭
